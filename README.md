@@ -1,5 +1,5 @@
 ## Udacity Project: Portfolio Site
-This is my Portfolio website project for udacity. Live version can be found here :
+This is my Portfolio website project for udacity. Live version can be found here : https://lowlah.github.io/Udacity-Portfolio/
 
 This is a resubmission of portfolio project. Logo in the project rubrics was mistaken for icons. A logo has been added. Also changes have been made to the navigation menu has required(the use of flex instead of display-in-block). 
 

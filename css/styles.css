@@ -1,0 +1,274 @@
+ /* Applies box sizing to all elements */
+ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Styles the body tag */
+body {
+    margin: 0 1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    width: auto;
+    color: rgb(75, 20, 20);
+}
+
+/* Applies the following style to all images */
+img {
+    max-width: 100%;
+}
+
+/* Styles the  page Heading */
+.page-header {
+    display: flex;
+    width: 100%;
+    margin-top: 2em;
+    justify-content: space-between;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+}
+
+.header-logo {
+    width: 50%;
+}
+
+.logo{
+    width: 50px;
+    fill: rgb(75, 20, 20);
+}
+
+/* Styles the navigation bar within the heading */
+.nav {
+    width: auto;
+    align-self: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(75, 20, 20);
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+}    
+
+.nav-item {
+    box-sizing: border-box;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    text-decoration: none;
+    padding: 1.5em;
+    color: white;
+    box-sizing: border-box;
+}
+
+.nav-links:hover {
+    text-decoration: underline;
+}
+
+/* Hides hamburger menu on wider screens. Hamburger menu should only be displayed on smaller screens */
+.header-menu {
+    display: none;
+}
+
+/* Styles the section containing past project images */
+.images {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto; 
+}
+
+.images-portfolio {
+    margin-right: 20px;
+    width: calc((100% - 20px)/3);
+}
+
+.images-portfolio:last-of-type {
+    margin-right: 0;
+}
+
+.link {
+    color: rgb(75, 20, 20);
+    min-width: 48px ;
+    min-height: 48px;
+    cursor: grab;
+}
+
+.link:hover {
+    background-color: rgb(75, 20, 20);
+    color:white ;
+}
+
+/* Styles the about me section */
+.about {
+    width: 100%;
+    background-color: rgb(231, 218, 218);
+    border: 2px solid gray;
+    text-align: center;
+    font-size: 2em;
+    padding: 1em;
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-image {
+    width: 20%;
+    align-self: center;
+   /* display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+}
+
+.imageCircle {
+    width: 100vmax;
+    border: 5px  solid white;
+    border-radius: 50%;
+    margin-top: 1em;
+}
+
+.text-thick {
+    font-weight: 400;
+}
+
+.social-icons{
+    font-size: 24px;
+    padding-left: 0.3em;
+    text-decoration: none;
+    color:rgb(75, 20, 20);
+}
+
+.about-name {
+    text-shadow: 0 4px gainsboro;
+    font-weight: 400;
+}
+
+/* Styles the footer */
+.author {
+    background-color: rgb(231, 218, 218);
+    color: rgb(75, 20, 20);
+    margin-top: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+}
+
+/* Applies certain styles at the following breakpoints */
+@media screen and (max-width: 549px) {
+    body {
+        font-size: 1em;
+    }
+
+    .header-image {
+        width: 40%;
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column;
+    } 
+   
+    .images-portfolio {
+        margin-bottom: 1em;
+        width: 100%;
+    }
+
+    .about {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 700px){
+    /* Hamburger menu is styled and displayed at this screen size */
+    .nav {
+        z-index: 1000000;
+        background-color: #fff;
+        width: 200px;
+        position: absolute;
+        align-self: auto;
+        margin: 0;
+        -webkit-transform: translate(-250px, 0);
+        -ms-transform: translate(-250px, 0);
+        -moz-transform: translate(-250px,0);
+        transform: translate(-250px, 0);
+        transition: transform 0.5s ease;
+    }
+
+    .nav.open {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        transform: translate(0, 0);
+    }
+
+    .nav-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(75, 20, 20);
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+    }    
+
+    .nav-item {
+       border-bottom: 1px solid #E0E0E0;
+       width: 100%;
+       text-align: left;
+    }    
+
+    /* Styles the hamburger icon */
+    .header-menu {
+        display: flex;
+        position: absolute;
+        right: 0;
+        padding: 1em;
+        font-size: 24px;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (min-width: 701px){
+    body {
+        margin: 0 4em;
+        box-sizing: border-box;
+    }
+
+    .header-logo {
+        margin-right: 1em;
+    }
+
+    /* ensures the navigation bar links does not move to the next line */    
+    .nav-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(75, 20, 20);
+        width: 100%;
+        display: flex;
+    }
+
+    .featured-heading {
+        font-size: 1.5em;
+    }
+   
+    .images {
+        display: flex;
+        flex-direction: row;
+    } 
+
+    .images-portfolio {
+        border: 2px solid rgb(231, 218, 218);
+        padding: 10px;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="css/styles.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
+    <title>Lola's Portfolio</title>
+</head>
+<body>
+    <!-- Page Main Heading-->
+    <header class="page-header">
+        <div class="header-logo">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" ><path id="mark_28_" class="st0" d="M13.3 0L0 7.7v17.6C0 33.4 6.5 40 14.6 40c2.7 0 5.2-.7 7.4-1.9l10.8-6.2C37.1 29.6 40 25.2 40 20V1.6L37.4.1 26 6.2v19.2c0 .8-.1 1.6-.2 2.4-.2.8-.4 1.5-.7 2.2l-.3.6c-.4 0-2.9-.9-4.2-1.8-.6-.4-1.1-.8-1.6-1.3s-.9-1-1.3-1.6c-.4-.6-.7-1.2-1-1.8-.3-.6-.5-1.3-.6-2-.1-.7-.1-1.4-.1-2.1V1.6L13.3 0zm6.5 36.2c-.7.3-1.7.7-2.5.9-.8.2-1.5.2-2.3.2-.8 0-1.6-.1-2.4-.3-.8-.2-1.5-.4-2.2-.7-.7-.3-1.4-.7-2-1.1C6.6 34.1 5.7 33.1 5 32c-.4-.6-.8-1.3-1.1-2-.3-.7-.5-1.5-.7-2.3-.2-.8-.2-1.6-.2-2.4V9.2l10-6.1V20c0 6.4 4.7 11.8 10.7 13.1-.2.3-.4.6-.7.8-1.1 1.1-2 1.8-3.2 2.3zm17-14c-.1.7-.4 1.4-.6 2-.3.6-.6 1.2-1 1.8-.4.6-1.6 2.1-3.2 3-1.6.9-3.1 1.2-4 1.4.6-1.6 1-3.2 1-5V7.7l8-4.6V20c0 .8 0 1.5-.2 2.2z"/></g></svg>
+        </div> 
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-links" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-links" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-links" href="#">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-links" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!--Hamburger menu for smaller screens-->
+        <a class="header-menu" id="menu">
+            <i class="fas fa-bars" ></i>
+        </a>
+    </header>
+    <!-- Main content-->
+    <section class="about">
+        <div class="header-image">
+            <img class="imageCircle" src="images/me.jpg" alt="my face">
+        </div>
+       <p class="text-thick">Welcome to my Portfolio Page!
+           <a href="https://www.linkedin.com/in/omolola-oladeinde-50a33859" class="fab fa-linkedin social-icons"></a>
+           <a href="https://twitter.com/lolah_11" class="fab fa-twitter-square social-icons"></a>
+       </p>
+       <p>My name is <span class="about-name">Omolola Oladeinde</span>. I am a FRONT END WEB DEVELOPER student at Udacity.</p>
+    </section>
+    <section class="featured-heading">
+        <h3>FEATURED WORK:</h3>
+    </section>
+    <section class="images">
+        <div class="images-portfolio">
+            <!--- Uses srcset to let the browser know the size of the image file  -->
+            <img src="images/pixel.png"
+                sizes="(max-width: 549px) 100vw,calc((100% - 20px)/3)"
+                srcset="images/pixel.png 420w,images/pixel2.png 640w,images/pixel3.png 1024w"
+                alt="screenshot of Pixel art maker project"
+            >
+            <h3> Pixel-Art Maker</h3>
+            <a  class="link" href="https://lowlah.github.io/Omolola/">Click Here</a>
+        </div>
+        <div class="images-portfolio">
+            <img src="images/portfolioweb.png"
+                sizes="(max-width: 549px) 100vw,calc((100% - 20px)/3)"
+                srcset="images/portfolioweb.png 420w,images/portfolioweb2.png 640w,images/portfolioweb3.png 1024w"
+                alt="screenshot of another design for portfolio project"
+            >
+            <h3>Portfolio site</h3>
+            <a  class="link" href="https://lowlah.github.io/portfolio2/">Click Here</a>
+        </div>
+        <div class="images-portfolio">
+            <img src="images/portfolio.png"
+                sizes="(max-width: 549px) 100vw,calc((100% - 20px)/3)"
+                srcset="images/portfolio.png 420w,images/portfolio640.png 640w,images/portfolio1024.png 1024w"
+                alt="brown colored imageplaceholder"
+            >
+            <h3> Memory Game</h3>
+            <a class="link" href="#">Click Here</a>
+        </div>
+    </section>
+    <footer class="author">
+        <p>© Omolola Oladeinde 2018</p>
+    </footer>
+ <!-- Javascript code for hamburger menu-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>
